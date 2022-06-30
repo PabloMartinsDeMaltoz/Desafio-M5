@@ -44,7 +44,7 @@ export function initPageD(params) {
  
   `;
   setTimeout(() => {
-    params.goTo("/pageE");
+    params.goTo("/result");
   }, 2000);
 
   div.appendChild(style);

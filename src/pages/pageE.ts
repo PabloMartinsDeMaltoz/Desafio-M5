@@ -72,7 +72,7 @@ export function initPageE(params) {
 
   const botonEl: any = div.querySelector(".boton");
   botonEl.addEventListener("click", () => {
-    params.goTo("/pageB");
+    params.goTo("/instruction");
   });
 
   div.appendChild(style);

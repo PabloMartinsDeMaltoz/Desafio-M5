@@ -54,19 +54,19 @@ export function initPageC(params) {
       state.setPcMove();
 
       if (state.timer == "closed") {
-        params.goTo("/pageD");
+        params.goTo("/moves");
       }
     });
   }
   timer[0].addEventListener("timer", (e: any) => {
     if (e.detail.timer == "closed" && state.data.myMove == "") {
-      params.goTo("/pageB");
+      params.goTo("/instruction");
     } else if (
       (e.detail.timer == "closed" && state.data.myMove == "piedra") ||
       "papel" ||
       "tijera"
     ) {
-      params.goTo("/pageD");
+      params.goTo("/moves");
     }
   });
   div.appendChild(style);

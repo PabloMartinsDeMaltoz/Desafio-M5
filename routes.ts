@@ -6,23 +6,23 @@ import { initPageE } from "./src/pages/pageE";
 import { state } from "./state";
 const routes = [
   {
-    path: /pageA/,
+    path: /welcome/,
     component: initPageA,
   },
   {
-    path: /pageB/,
+    path: /instruction/,
     component: initPageB,
   },
   {
-    path: /pageC/,
+    path: /play/,
     component: initPageC,
   },
   {
-    path: /pageD/,
+    path: /moves/,
     component: initPageD,
   },
   {
-    path: /pageE/,
+    path: /result/,
     component: initPageE,
   },
 ];
@@ -56,7 +56,7 @@ export function initRoute(rootEl: Element) {
     }
   }
   if (location.pathname == "/Desafio-M5/" || location.pathname == "/") {
-    goTo("/pageA");
+    goTo("/welcome");
   } else {
     handleRoute(location.pathname);
   }

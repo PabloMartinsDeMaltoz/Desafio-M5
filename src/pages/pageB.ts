@@ -44,7 +44,7 @@ export function initPageB(params) {
   const buttonEl:any = div.querySelector(".boton");
   buttonEl.addEventListener("click", (e) => {
     e.preventDefault();
-    params.goTo("/pageC");
+    params.goTo("/play");
   });
   return div;
 }
