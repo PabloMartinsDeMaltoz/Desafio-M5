@@ -26,34 +26,34 @@ const routes = [
     component: initPageE,
   },
 ];
-const BASE_PATH = "/Desafio-M5";
+const BASE_PATH = "/desafio-m5";
 
 function isGithubPages() {
   return location.host.includes("github.io");
 }
 
-export function initRoute(rootEl: Element) {
+export function initRoute(container: Element) {
   function goTo(path) {
     const completePath = isGithubPages() ? BASE_PATH + path : path;
     history.pushState({}, "", completePath);
     handleRoute(completePath);
   }
-
   function handleRoute(route) {
     for (const r of routes) {
       console.log("El handleRoute recibió una nueva ruta", route);
-      const newRoute = isGithubPages() ? route.replace(BASE_PATH, "") : route;git
+      const newRoute = isGithubPages() ? route.replace(BASE_PATH, "") : route;
       if (r.path.test(newRoute)) {
         const el = r.component({ goTo: goTo });
-        if (rootEl.firstChild) {
-          rootEl.firstChild.remove();
+
+        if (container.firstChild) {
+          container.firstChild.remove();
         }
-        rootEl.appendChild(el);
+        container.appendChild(el);
       }
     }
   }
-  if (location.pathname == "/Desafio-M5/" || location.pathname == "/") {
-    goTo("/pageA");
+  if (location.pathname == "/desafio-m5/" || location.pathname == "/") {
+    goTo("/welcome");
   } else {
     handleRoute(location.pathname);
   }
