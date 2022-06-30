@@ -26,7 +26,7 @@ const routes = [
     component: initPageE,
   },
 ];
-const BASE_PATH = "/desafio-m5";
+const BASE_PATH = "/Desafio-M5";
 
 function isGithubPages() {
   return location.host.includes("github.io");
@@ -52,7 +52,7 @@ export function initRoute(rootEl: Element) {
       }
     }
   }
-  if (location.pathname == "/desafio-m5/" || location.pathname == "/") {
+  if (location.pathname == "/Desafio-M5/" || location.pathname == "/") {
     goTo("/pageA");
   } else {
     handleRoute(location.pathname);
