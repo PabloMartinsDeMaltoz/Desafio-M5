@@ -40,9 +40,9 @@ export function initRoute(rootEl: Element) {
   }
 
   function handleRoute(route) {
-    console.log("El handleRoute recibió una nueva ruta", route);
-    const newRoute = isGithubPages() ? route.replace(BASE_PATH, "") : route;
     for (const r of routes) {
+      console.log("El handleRoute recibió una nueva ruta", route);
+      const newRoute = isGithubPages() ? route.replace(BASE_PATH, "") : route;git
       if (r.path.test(newRoute)) {
         const el = r.component({ goTo: goTo });
         if (rootEl.firstChild) {
