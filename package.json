@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "parcel": "^2.5.0"
+  },
+  "scripts": {
+    "dev": "parcel ./index.html",
+    "build": "parcel build ./index.html --dist-dir build --public-url Desafio5",
+    "deploy": "gh-pages -d build"
+  },
+  "dependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
